@@ -28,7 +28,7 @@ header {
   align-items: center;
   color: red;
   font-style: italic;
-  text-shadow: -0.5px 0.5px 1px black;
+  text-shadow: -0.5px 0.5px 1.1px black;
 }
 
 .title-word-2 {
@@ -37,12 +37,13 @@ header {
   align-items: center;
   font-size: 40px;
   padding-top: 15px;
+  text-shadow: -0.5px 0.5px 1px silver;
 }
 
 .title-word-3 {
   align-items: center;
   display: flex;
-  text-shadow: -0.5px 0.5px 1px black;
+  text-shadow: -0.5px 0.5px 1.1px black;
 }
 
 #name-1 {
@@ -90,13 +91,28 @@ nav {
 main {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
-  margin: 100px 5px 0px 5px;
+  margin: 100px calc(10%) 0px calc(10%);
   gap: 50px;
   font-size: 40px;
 }
 
 main * {
   height: 50px;
+}
+
+button {
+  background-color: inherit;
+  text-shadow: -0.5px 0.5px 1px silver;
+}
+
+button:hover {
+  cursor: pointer;
+  text-shadow: -0.5px 0.5px 1.6px gray;
+}
+
+button:active {
+  text-shadow: none;
+  text-shadow: -0.5px 0.5px 1px silver;
 }
 
 #post-1 {
@@ -107,12 +123,11 @@ main * {
 }
 
 #post-button-1 {
-  background-color: inherit;
   font-size: 40px;
   transition-duration: 200ms;
 }
 
 #post-title-1 {
-  border-left: 1px solid black;
   text-align: center;
+  font-size: 40px;
 }
