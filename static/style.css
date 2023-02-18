@@ -1,0 +1,104 @@
+body * {
+  border: none;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 2fr 9fr 1fr;
+  margin: 20px calc(10%);
+}
+
+header {
+  border: none;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+#title {
+  border: none;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  font-size: 70px;
+  gap: calc(10px + 10%);
+}
+
+.title-word-1 {
+  display: flex;
+  justify-content: end;
+  color: red;
+  font-style: italic;
+  text-shadow: -0.5px 0.5px 1px black;
+}
+
+.title-word-2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 40px;
+  padding-bottom: 7px;
+}
+
+.title-word-3 {
+  display: flex;
+  text-shadow: -0.5px 0.5px 1px black;
+}
+
+#name-1 {
+  color: blue;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#name-2 {
+  color: pink;
+}
+
+#name-3 {
+  color: yellow;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#name-4 {
+  color: green;
+}
+
+#name-5 {
+  color: gray;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  border-top: 1px solid black;
+  color: black;
+  justify-items: center;
+}
+
+main {
+  font-size: 40px;
+  margin: 100px 5px 0px 5px;
+}
+
+#post-button-1 {
+  font-size: 30px;
+  background-color: inherit;
+  border-right: 1px solid black;
+}
+
+.post-1 {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 20px;
+  border: 1px solid black;
+  border-top: none;
+}
