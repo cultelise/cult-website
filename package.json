@@ -1,19 +1,22 @@
 {
-  "name": "personal-blog",
+  "name": "cult-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "personal website",
   "main": "index.js",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cultelise/personal-blog.git"
+    "url": "git+https://github.com/cultelise/cult-website.git"
   },
-  "author": "elise",
+  "author": "Elise",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cultelise/personal-blog/issues"
+    "url": "https://github.com/cultelise/cult-website/issues"
   },
-  "homepage": "https://github.com/cultelise/personal-blog#readme"
+  "homepage": "https://github.com/cultelise/cult-website#readme"
 }
