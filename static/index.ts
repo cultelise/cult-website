@@ -3,6 +3,7 @@ const postSymbol1 = document.getElementById(
 ) as HTMLButtonElement;
 const postTitle1 = document.getElementById('post-title-1') as HTMLButtonElement;
 const post1 = document.getElementById('post-1') as HTMLButtonElement;
+const postContent1 = document.getElementById('post-content-1');
 
 const buttonHandler = (e: Event) => {
   const target = e.target as HTMLButtonElement;
@@ -24,18 +25,16 @@ const buttonHandler = (e: Event) => {
       button.textContent = '☼';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
-      setTimeout(() => {
-        post1.style.borderBottom = '2px solid black';
-        post1.style.borderTop = '2px solid whitesmoke';
-      }, 100);
+      post1.style.borderBottom = '2px solid black';
+      post1.style.borderTop = '2px solid whitesmoke';
+      postContent1.className = 'hide';
     } else {
-      setTimeout(() => {
-        post1.style.borderBottom = '2px dashed whitesmoke';
-        post1.style.borderTop = '2px solid black';
-      }, 100);
+      post1.style.borderBottom = '2px dashed whitesmoke';
+      post1.style.borderTop = '2px solid black';
       button.textContent = '☽';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
+      postContent1.className = 'show';
     }
   }, 200);
 };
