@@ -13,39 +13,25 @@ const buttonHandler = (e: Event) => {
   } else {
     button = postSymbol1;
   }
-  let postHeight = post1.style.height;
-  console.log(postHeight);
-
   button.style.opacity = '0';
-  postTitle1.style.opacity = '0';
   post1.style.opacity = '0';
   button.style.fontSize = '30px';
-  // if (button.textContent == '☼') {
-  //   postSymbol1.style.borderBottom = '2px solid whitesmoke';
-  //   postTitle1.style.borderBottom = '2px solid whitesmoke';
-  // }
+
   setTimeout(() => {
     if (button.textContent == '☽') {
       button.textContent = '☼';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
-      postTitle1.style.opacity = '100';
       post1.style.opacity = '100';
-      // postSymbol1.style.borderBottom = '2px solid black';
-      // postTitle1.style.borderBottom = '2px solid black';
-      // postContent1.className = 'hide';
+      post1.style.alignSelf = 'center';
     } else {
-      // postSymbol1.style.borderBottom = '2px solid whitesmoke';
-      // postTitle1.style.borderBottom = '2px solid whitesmoke';
       button.textContent = '☽';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
-      postTitle1.style.opacity = '100';
       post1.style.opacity = '100';
-      // postContent1.className = 'show';
-      post1.style.gridRow = '1 / 3';
+      post1.style.alignSelf = 'stretch';
     }
-  }, 200);
+  }, 300);
 };
 
 postSymbol1.addEventListener('click', buttonHandler);
