@@ -14,26 +14,28 @@ const buttonHandler = (e: Event) => {
     button = postSymbol1;
   }
   button.style.opacity = '0';
+  postTitle1.style.opacity = '0';
   button.style.fontSize = '30px';
-  if (button.textContent == '☽') {
-    post1.style.borderTop = '2px solid whitesmoke';
-  } else {
-    post1.style.borderBottom = '2px solid whitesmoke';
-  }
+  // if (button.textContent == '☼') {
+  //   postSymbol1.style.borderBottom = '2px solid whitesmoke';
+  //   postTitle1.style.borderBottom = '2px solid whitesmoke';
+  // }
   setTimeout(() => {
     if (button.textContent == '☽') {
       button.textContent = '☼';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
-      post1.style.borderBottom = '2px solid black';
-      post1.style.borderTop = '2px solid whitesmoke';
+      postTitle1.style.opacity = '100';
+      postSymbol1.style.borderBottom = '2px solid black';
+      postTitle1.style.borderBottom = '2px solid black';
       postContent1.className = 'hide';
     } else {
-      post1.style.borderBottom = '2px dashed whitesmoke';
-      post1.style.borderTop = '2px solid black';
+      postSymbol1.style.borderBottom = '2px solid whitesmoke';
+      postTitle1.style.borderBottom = '2px solid whitesmoke';
       button.textContent = '☽';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
+      postTitle1.style.opacity = '100';
       postContent1.className = 'show';
     }
   }, 200);
