@@ -6,6 +6,8 @@ const postButton1 = document.getElementById(
 const postTitle1 = document.getElementById('post-title-1') as HTMLLinkElement;
 const postContent1 = document.getElementById('post-content-1');
 const hideBox = document.getElementById('opaque-layer') as HTMLDivElement;
+const eyeClosed = document.getElementById('eye-closed');
+const eyeOpen = document.getElementById('eye-open');
 
 const buttonHandler = (e: Event) => {
   const target = e.target as HTMLButtonElement;
@@ -22,15 +24,18 @@ const buttonHandler = (e: Event) => {
 
 const timeOut = (button: HTMLButtonElement) => {
   setTimeout(() => {
-    if (button.textContent == '☼') {
-      button.textContent = '☽';
+    if (eyeClosed.className == 'hide') {
+      eyeClosed.className = 'show';
+      eyeOpen.className = 'hide';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
       post1.style.opacity = '100';
       postContent1.className = 'hide';
       postTitle1.style.borderBottom = '1px solid black';
     } else {
-      button.textContent = '☼';
+      eyeClosed.className = 'hide';
+      eyeOpen.className = 'show';
+      // button.textContent = '☼';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
       post1.style.opacity = '100';

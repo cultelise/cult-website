@@ -4,6 +4,8 @@ var postButton1 = document.getElementById('post-button-1');
 var postTitle1 = document.getElementById('post-title-1');
 var postContent1 = document.getElementById('post-content-1');
 var hideBox = document.getElementById('opaque-layer');
+var eyeClosed = document.getElementById('eye-closed');
+var eyeOpen = document.getElementById('eye-open');
 var buttonHandler = function (e) {
     var target = e.target;
     var button;
@@ -18,8 +20,9 @@ var buttonHandler = function (e) {
 };
 var timeOut = function (button) {
     setTimeout(function () {
-        if (button.textContent == '☼') {
-            button.textContent = '☽';
+        if (eyeClosed.className == 'hide') {
+            eyeClosed.className = 'show';
+            eyeOpen.className = 'hide';
             button.style.fontSize = '40px';
             button.style.opacity = '100';
             post1.style.opacity = '100';
@@ -27,7 +30,9 @@ var timeOut = function (button) {
             postTitle1.style.borderBottom = '1px solid black';
         }
         else {
-            button.textContent = '☼';
+            eyeClosed.className = 'hide';
+            eyeOpen.className = 'show';
+            // button.textContent = '☼';
             button.style.fontSize = '40px';
             button.style.opacity = '100';
             post1.style.opacity = '100';

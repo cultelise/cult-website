@@ -186,3 +186,8 @@ button:active {
   pointer-events: none;
   transition: font-size 300ms, opacity 300ms;
 }
+
+img {
+  pointer-events: none;
+  height: 35px;
+}
