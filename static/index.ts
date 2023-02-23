@@ -1,9 +1,11 @@
-const postSymbol1 = document.getElementById(
+const main = document.querySelector('main');
+const post1 = document.getElementById('post-1') as HTMLDivElement;
+const postButton1 = document.getElementById(
   'post-button-1'
 ) as HTMLButtonElement;
 const postTitle1 = document.getElementById('post-title-1') as HTMLLinkElement;
-const post1 = document.getElementById('post-1') as HTMLDivElement;
 const postContent1 = document.getElementById('post-content-1');
+const hideBox = document.getElementById('opaque-layer') as HTMLDivElement;
 
 const buttonHandler = (e: Event) => {
   const target = e.target as HTMLButtonElement;
@@ -13,8 +15,12 @@ const buttonHandler = (e: Event) => {
   }
   button.style.opacity = '0';
   post1.style.opacity = '0';
+  post1.style.pointerEvents = 'none';
   button.style.fontSize = '30px';
+  timeOut(button);
+};
 
+const timeOut = (button: HTMLButtonElement) => {
   setTimeout(() => {
     if (button.textContent == '☼') {
       button.textContent = '☽';
@@ -32,7 +38,10 @@ const buttonHandler = (e: Event) => {
       postTitle1.style.borderBottom = 'none';
     }
   }, 300);
+  setTimeout(() => {
+    post1.style.pointerEvents = 'auto';
+  }, 500);
 };
 
-postSymbol1.addEventListener('click', buttonHandler);
+postButton1.addEventListener('click', buttonHandler);
 postTitle1.addEventListener('click', buttonHandler);

@@ -1,3 +1,22 @@
+::-moz-selection {
+  /* Code for Firefox */
+  color: whitesmoke;
+  background: black;
+}
+
+::selection {
+  color: whitesmoke;
+  background: black;
+}
+
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body * {
   border: none;
 }
@@ -161,4 +180,9 @@ button:active {
   font-style: italic;
   font-weight: normal;
   padding: 5px;
+}
+
+#opaque-layer {
+  pointer-events: none;
+  transition: font-size 300ms, opacity 300ms;
 }

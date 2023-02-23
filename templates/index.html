@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cult of Elise</title>
     <link rel="stylesheet" href="../static/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.svg" />
   </head>
   <body>
     <header>
-      <div id="title">
+      <div id="title" class="unselectable">
         <div class="title-word-1">Cult</div>
         <div class="title-word-2">of</div>
         <div class="title-word-3">
@@ -21,7 +22,7 @@
         </div>
       </div>
 
-      <nav>
+      <nav class="unselectable">
         <li id="about"><a href="">about</a></li>
         <li id="altar"><a href="">altar</a></li>
         <li id="cast"><a href="">cast</a></li>
@@ -31,9 +32,11 @@
     </header>
     <main>
       <div id="post-1">
-        <button id="post-button-1">☽</button>
+        <button id="post-button-1" class="unselectable">☽</button>
 
-        <div id="post-title-1"><a href="">Blog Post Title</a></div>
+        <div id="post-title-1">
+          <a href="">Blog Post Title</a>
+        </div>
 
         <div id="post-content-1" class="hide">{{ preview }}</div>
       </div>
