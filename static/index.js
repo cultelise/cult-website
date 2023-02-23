@@ -8,26 +8,25 @@ var buttonHandler = function (e) {
     if (target.id == 'post-button-1') {
         button = e.target;
     }
-    else {
-        button = postSymbol1;
-    }
     button.style.opacity = '0';
     post1.style.opacity = '0';
     button.style.fontSize = '30px';
     setTimeout(function () {
-        if (button.textContent == '☽') {
-            button.textContent = '☼';
-            button.style.fontSize = '40px';
-            button.style.opacity = '100';
-            post1.style.opacity = '100';
-            post1.style.alignSelf = 'center';
-        }
-        else {
+        if (button.textContent == '☼') {
             button.textContent = '☽';
             button.style.fontSize = '40px';
             button.style.opacity = '100';
             post1.style.opacity = '100';
-            post1.style.alignSelf = 'stretch';
+            postContent1.className = 'hide';
+            postTitle1.style.borderBottom = '1px solid black';
+        }
+        else {
+            button.textContent = '☼';
+            button.style.fontSize = '40px';
+            button.style.opacity = '100';
+            post1.style.opacity = '100';
+            postContent1.className = 'show';
+            postTitle1.style.borderBottom = 'none';
         }
     }, 300);
 };
