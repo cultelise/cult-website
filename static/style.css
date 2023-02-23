@@ -10,11 +10,13 @@ body {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 a:hover {
   color: hsl(0, 0%, 30%);
   text-shadow: 0px 1px 1px 1px silver;
+  /* text-decoration: underline; */
 }
 
 .hide {
@@ -107,7 +109,7 @@ nav {
 main {
   display: flex;
   justify-items: stretch;
-  margin: 100px calc(10%) 0px calc(5%);
+  margin: 100px calc(13%) 0px calc(5%);
   font-size: 40px;
 }
 
@@ -128,9 +130,9 @@ button:active {
 
 #post-1 {
   flex: 1;
-  align-self: flex-start;
   display: grid;
   grid-template-columns: 1fr 9fr;
+  align-self: flex-start;
   justify-items: stretch;
   transition: font-size 300ms, opacity 300ms;
 }
