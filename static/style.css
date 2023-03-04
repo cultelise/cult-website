@@ -55,33 +55,42 @@ header {
 #title {
   border: none;
   display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
   font-size: 80px;
-  gap: calc(10px + 10%);
+  /* gap: calc(10px + 10%); */
 }
 
 .title-word-1 {
   display: flex;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
   justify-content: end;
   align-items: center;
   color: red;
   font-style: italic;
   text-shadow: -0.5px 0.5px 1.1px black;
+  z-index: 1;
 }
 
 .title-word-2 {
   display: flex;
+  grid-column: 2 / span 3;
+  grid-row: 1 / span 1;
   justify-content: center;
   align-items: center;
   font-size: 45px;
   padding-top: 15px;
   text-shadow: -0.5px 0.5px 1px silver;
+  z-index: 2;
 }
 
 .title-word-3 {
+  grid-column: -3 / -1;
+  grid-row: 1 / span 1;
   align-items: center;
   display: flex;
   text-shadow: -0.5px 0.5px 1.1px black;
+  z-index: 3;
 }
 
 #name-1 {
