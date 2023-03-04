@@ -25,6 +25,7 @@ body {
   display: grid;
   grid-template-rows: 2fr 9fr 1fr;
   margin: 20px calc(10%);
+  background-color: hsl(0, 0%, 99%);
 }
 
 a {
@@ -56,24 +57,25 @@ header {
   border: none;
   display: grid;
   grid-template-columns: 6fr 1fr 1fr 1fr 6fr;
-  font-size: 80px;
+  font-size: 160px;
   /* gap: 10px; */
 }
 
 .title-word-1 {
   display: flex;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   grid-row: 1 / span 1;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   color: red;
   font-style: italic;
-  text-shadow: -0.5px 0.5px 1.1px black;
+  text-shadow: -0.5px 0.5px 1.5px black;
   z-index: 1;
-  margin: 0 calc(-50%) 0 0;
+  margin: 0 0 0 calc(5vh);
 }
 
 .title-word-2 {
+  color: white;
   display: flex;
   grid-column: 3 / span 1;
   grid-row: 1 / span 1;
@@ -81,20 +83,20 @@ header {
   align-items: center;
   font-size: 45px;
   padding-top: 15px;
-  text-shadow: -0.5px 0.5px 1px silver;
+  text-shadow: -0.5px 0.5px 1px black;
   z-index: 2;
   /* margin: 0 calc(-50%); */
 }
 
 .title-word-3 {
-  grid-column: 3 / -1;
+  grid-column: 4 / -1;
   grid-row: 1 / span 1;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   display: flex;
-  text-shadow: -0.5px 0.5px 1.1px black;
+  text-shadow: -0.5px 0.5px 1.5px black;
   z-index: 3;
-  margin: 0 0 0 calc(-50%);
+  margin: 0 calc(15vh) 0 0;
 }
 
 #name-1 {
@@ -103,13 +105,13 @@ header {
   display: flex;
   align-items: center;
   padding-bottom: 5px;
-  margin: 0 calc(-30px + 2.5vw) 0 0;
+  margin: 0 calc(-25px + 2.5vw) 0 0;
   z-index: 1;
 }
 
 #name-2 {
   color: pink;
-  margin: 0 calc(-30px + 2.5vw);
+  margin: 0 calc(-25px + 2.5vw);
   z-index: 2;
 }
 
@@ -119,13 +121,13 @@ header {
   display: flex;
   align-items: center;
   padding-bottom: 5px;
-  margin: 0 calc(-30px + 2.5vw);
+  margin: 0 calc(-25px + 2.5vw) 0 calc(-35px + 2.5vw);
   z-index: 3;
 }
 
 #name-4 {
   color: green;
-  margin: 0 calc(-30px + 2.5vw);
+  margin: 0 calc(-25px + 2.5vw);
   z-index: 4;
 }
 
@@ -135,7 +137,7 @@ header {
   display: flex;
   align-items: center;
   padding-bottom: 5px;
-  margin: 0 0 0 calc(-30px + 2.5vw);
+  margin: 0 0 0 calc(-25px + 2.5vw);
   z-index: 5;
 }
 
