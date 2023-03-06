@@ -3,7 +3,7 @@ const post1 = document.getElementById('post-1') as HTMLDivElement;
 const postButton1 = document.getElementById(
   'post-button-1'
 ) as HTMLButtonElement;
-const postTitle1 = document.getElementById('post-title-1') as HTMLLinkElement;
+const postTitle1 = document.getElementById('post-link-1') as HTMLLinkElement;
 const postContent1 = document.getElementById('post-content-1');
 const hideBox = document.getElementById('opaque-layer') as HTMLDivElement;
 const eyeClosed = document.getElementById('eye-closed');
@@ -35,7 +35,6 @@ const timeOut = (button: HTMLButtonElement) => {
     } else {
       eyeClosed.className = 'hide';
       eyeOpen.className = 'show';
-      // button.textContent = '☼';
       button.style.fontSize = '40px';
       button.style.opacity = '100';
       post1.style.opacity = '100';

@@ -1,14 +1,18 @@
 from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
-
-title = "Blog Post Title"
-preview = "Preview Text"
 
 
 @app.route("/")
 def hello_elise():
-    return render_template("index.html", title=title, preview=preview)
+    title = "The Eye of The World..."
+    preview = "Shall Open Once More"
+    return render_template(
+        "index.html",
+        title=title,
+        preview=preview,
+    )
 
 
 if __name__ == "__main__":
